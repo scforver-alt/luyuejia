@@ -711,8 +711,8 @@ function on(id,fn){const e=$(id);if(e)e.onclick=fn}
 function intro(){
   $("hud").hidden=true;
   render(`<div><h1><small>三天 · 周五到周日</small>读懂鲁月佳</h1>
-  <p class="lede">她叫鲁月佳，一个被工作磨得只剩下反射神经的人。她不太会说话，很自我，说话很毒，而且冷。朋友不多，她也不觉得这是个问题。</p>
-  <p class="lede" style="margin-top:14px">她不会哭着跟你要什么。她难受的时候只做两件事：先扎你一句，然后消失。你得在那一句底下，听出她真正想说的。</p>
+  <p class="lede">她叫鲁月佳。工作把她磨得有点钝了——话不多，也不太爱解释自己；按自己的节奏过日子，不怎么迁就谁。心情沉下去的时候，说出口的话会比她本意硬一点，然后就安静下去了。</p>
+  <p class="lede" style="margin-top:14px">她不会开口跟你要什么。难受的时候她也只是把话说硬，然后把自己收起来。她不是没有情绪，只是太习惯自己消化了——你要做的，是在那句硬话底下，听出她其实想说的那半句。</p>
   <p class="lede" style="margin-top:14px">你只有三天：<b>周五加班夜、周六、周日</b>，每天三个节点。周日晚上十一点，她会把一个她从没问过的问题摆到你面前。</p>
   <p class="lede" style="margin-top:14px;color:var(--tx3)">——她的生日、星座、属相、多大年纪，这里一个字都不会先告诉你。</p>
   <div class="banner s">开始之前，先来 8 道摸底题。它们不提示对错，但会决定你的起点——你越懂她，她在你面前越不用绷着。</div>
@@ -765,7 +765,7 @@ function quizEnd(){
     <div class="card"><div class="eyebrow">你的专属初始面板</div>
       <div class="deltas">${KEY.map(k=>`<div class="dl"><div class="n">${NAME[k]}</div><div class="v">${Math.round(S.A[k])}</div></div>`).join("")}</div>
       <p style="color:var(--tx3);font-size:12px;margin:12px 0 0">内耗为反向属性，由你的熟悉度反向生成：越懂她，她在你面前越不用绷着。<br>偏爱度开局上限 40——她不会因为你答对了几道题就把人放进来。</p></div>
-    ${say("……哦，是你。<br>先说好，我不太会聊天，话难听，心情不好就不回消息。<br>也别指望我解释什么，我懒得解释。<br>……现在退出还来得及。")}
+    ${say("……哦，是你。<br>先说好，我话不多，心情不好的时候可能不回消息。<br>也别等我解释什么，我不太会讲这些。<br>……嫌麻烦的话，现在退出还来得及。")}
     <button class="btn" id="go">进入周五 · 加班夜</button></div>`);
   on("go",()=>{S.ph="day";S.day=1;derive();buildDay();step()});
 }
